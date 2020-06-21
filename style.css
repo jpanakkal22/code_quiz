@@ -1,0 +1,29 @@
+body {
+    background-color: yellow;
+}
+
+.main {
+    background-color: white;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+h1 {
+    text-decoration: underline orange;
+    text-align: center;
+ 
+}
+
+#red {
+    color: red;
+}
+#blue {
+    color: blue;
+}
+#green {
+    color: green;
+}
+#button {
+    margin-left: 500px;
+    margin-top: 40px;
+}

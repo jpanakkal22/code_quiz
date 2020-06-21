@@ -14,7 +14,18 @@ var questions = [{q:"A _____________ can store different values at different tim
                  {q:"To find the length of a string, add ___________ to the end.", a2:".length", a3:".querySelector", a1:".charAt"}
 ];
 
-startButton.addEventListener("click", function(){   
+ans1.style.display = "none";
+ans2.style.display = "none";
+ans3.style.display = "none";
+next.style.display = "none";
+
+startButton.addEventListener("click", function(){
+    startButton.style.display = "none";
+    ans1.style.display = "";
+    ans2.style.display = "";
+    ans3.style.display = "";
+    next.style.display = "";
+    showQuestions();
    var time = 90;       
    var quizTimer = setInterval(function() {   
    time--;
