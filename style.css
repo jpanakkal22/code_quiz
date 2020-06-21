@@ -4,7 +4,7 @@ body {
 
 .main {
     background-color: white;
-    padding: 30px;
+    padding: 50px;
     margin-top: 30px;
 }
 
@@ -22,8 +22,4 @@ h1 {
 }
 #green {
     color: green;
-}
-#button {
-    margin-left: 500px;
-    margin-top: 40px;
 }

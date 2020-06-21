@@ -1,57 +1,109 @@
+//questions and answers object
+
+var questions = [{
+    q:"What can store different values at different times?",
+    opt1:"variable", 
+    opt2:"boolean", 
+    opt3:"string",
+    a:"1"
+},{
+    q:"Building a new string out of other strings is called what?", 
+    opt1:"declaring",
+    opt2:"concatenating", 
+    opt3:"arrays",
+    a:"2"
+},{
+    q:"To find the length of a string, what should you add to the end?", 
+    opt1:".charAt",
+    opt2:".querySelector", 
+    opt3:".length",
+    a:"3"
+}];
+
 var startButton = document.querySelector("#button");
 var timerDisplay = document.querySelector("#heading2");
 var next = document.querySelector("#nxtQ");
 var quest = document.querySelector("#question");
-var ans1 = document.querySelector("#answer1");
-var ans2 = document.querySelector("#answer2");
-var ans3 = document.querySelector("#answer3");
+var option1 = document.querySelector("#option1");
+var option2 = document.querySelector("#option2");
+var option3 = document.querySelector("#option3");
+var answerButtons = document.querySelector("#answerBtns");
+var container = document.querySelector(".container");
 
-
+//var currentQuestions = 1;
+var time = 90;  
 var index = 0;
 var score = 0;
-var questions = [{q:"A _____________ can store different values at different times.", a1:"variable", a2:"boolean", a3:"string"},
-                 {q:"Building a new string out of other strings is called _______________.", a2:"concatenating", a1:"declaring", a3:"arrays"},
-                 {q:"To find the length of a string, add ___________ to the end.", a2:".length", a3:".querySelector", a1:".charAt"}
-];
+var totQuestions = questions.length;
 
-ans1.style.display = "none";
-ans2.style.display = "none";
-ans3.style.display = "none";
+
+//hide buttons at start
+option1.style.display = "none";
+option2.style.display = "none";
+option3.style.display = "none";
 next.style.display = "none";
 
+//timer
 startButton.addEventListener("click", function(){
     startButton.style.display = "none";
-    ans1.style.display = "";
-    ans2.style.display = "";
-    ans3.style.display = "";
+    option1.style.display = "";
+    option2.style.display = "";
+    option3.style.display = "";
     next.style.display = "";
     showQuestions();
-   var time = 90;       
-   var quizTimer = setInterval(function() {   
-   time--;
-   timerDisplay.textContent = "TIME... " + time;        
-   if(time === 0) {
-   clearInterval(quizTimer);
-   }
-   }, 1000);        
+         
+    var quizTimer = setInterval(function() {   
+    time--;
+    timerDisplay.textContent = "TIME... " + time;        
+    if(time === 0) {
+    clearInterval(quizTimer);
+    }
+    }, 1000);        
 })
 
 //Function to display question and answers
 function showQuestions(){
     quest.textContent = questions[index].q; 
+    option1.textContent = questions[index].opt1;    
+    option2.textContent = questions[index].opt2;    
+    option3.textContent = questions[index].opt3;    
+       
+    
+}
+//console.log(currentQuestions);
+answerButtons.addEventListener("click", function(event){
+//    console.log(questions[index].a);    
+    if(event.target.value === questions[index].a) {
+        alert("CORRECT!")
+        score++;
+        }
+    else{
+        alert("WRONG!");   
+        score--;        
+    } 
+    index++; 
+    if(index > totQuestions - 1){
+     gameOver();
+    }
+    showQuestions();
+    //currentQuestions++;      
+})
 
-    ans1.textContent = questions[index].a1;
-    
-    ans2.textContent = questions[index].a2;
-    
-    ans3.textContent = questions[index].a3;
-    
-    index++;    
+function gameOver (){
+    container.innerHTML = " ";
+    var tag = document.createElement("h1");
+    tag.textContent = "Your time is " + time;
+    container.appendChild(tag);
 }
 
-next.addEventListener("click", function(){
-    showQuestions();
-})
+
+//next.addEventListener("click", function(){
+   
+    //console.log(currentQuestions);
+    //showQuestions();
+    
+    
+//})
 
 
 
