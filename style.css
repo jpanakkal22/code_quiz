@@ -6,11 +6,12 @@ body {
     background-color: white;
     padding: 50px;
     margin-top: 30px;
+    
 }
 
 h1 {
     text-decoration: underline orange;
-    text-align: center;
+  
  
 }
 
@@ -22,4 +23,52 @@ h1 {
 }
 #green {
     color: green;
+}
+
+#button {
+    width: 400px;
+    
+    padding: 10px 0 10px 0;
+    border-radius: 20px;
+    
+    background:limegreen;
+    color: yellow;
+    font-weight: bolder;
+}
+
+
+#option1 {
+    width:400px;
+    
+    padding: 10px 0 10px 15px;
+    vertical-align: middle;
+    background:red;
+    margin: 10px 0 10px 10px;
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    
+}
+#option2 {
+    width:400px;
+   
+    padding: 10px 0 10px 15px;
+    vertical-align: middle;
+    background:blue;
+    margin: 10px 0 10px 10px;
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    
+}
+#option3 {
+    width:400px;
+   
+    padding: 10px 0 10px 15px;
+    vertical-align: middle;
+    background:purple;
+    margin: 10px 0 10px 10px;
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
 }

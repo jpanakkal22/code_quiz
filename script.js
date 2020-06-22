@@ -30,7 +30,7 @@ var option3 = document.querySelector("#option3");
 var answerButtons = document.querySelector("#answerBtns");
 var container = document.querySelector(".container");
 
-//var currentQuestions = 1;
+
 var time = 90;  
 var index = 0;
 var score = 0;
@@ -41,7 +41,7 @@ var totQuestions = questions.length;
 option1.style.display = "none";
 option2.style.display = "none";
 option3.style.display = "none";
-next.style.display = "none";
+
 
 //timer
 startButton.addEventListener("click", function(){
@@ -49,7 +49,7 @@ startButton.addEventListener("click", function(){
     option1.style.display = "";
     option2.style.display = "";
     option3.style.display = "";
-    next.style.display = "";
+   
     showQuestions();
          
     var quizTimer = setInterval(function() {   
@@ -89,6 +89,7 @@ answerButtons.addEventListener("click", function(event){
     //currentQuestions++;      
 })
 
+//game over function
 function gameOver (){
     container.innerHTML = " ";
     var tag = document.createElement("h1");
@@ -96,14 +97,6 @@ function gameOver (){
     container.appendChild(tag);
 }
 
-
-//next.addEventListener("click", function(){
-   
-    //console.log(currentQuestions);
-    //showQuestions();
-    
-    
-//})
 
 
 
