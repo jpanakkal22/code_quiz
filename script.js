@@ -18,6 +18,19 @@ var questions = [{
     opt2:".querySelector", 
     opt3:".length",
     a:"3"
+},{
+    q:"What characters are use to add comments to Javascript?", 
+    opt1:"/*",
+    opt2:"//", 
+    opt3:"<!-- -->",
+    a:"2"
+},{
+    q:"What is a type of variable that can contain many values, and uses name:value pairs?", 
+    opt1:"objects",
+    opt2:"arrays", 
+    opt3:"functions",
+    a:"1"
+
 }];
 
 var startButton = document.querySelector("#button");
@@ -31,7 +44,7 @@ var answerButtons = document.querySelector("#answerBtns");
 var container = document.querySelector(".container");
 
 
-var time = 90;  
+var time = 20;  
 var index = 0;
 var score = 0;
 var totQuestions = questions.length;
