@@ -35,7 +35,6 @@ var questions = [{
 
 var startButton = document.querySelector("#button");
 var timerDisplay = document.querySelector("#heading2");
-var next = document.querySelector("#nxtQ");
 var quest = document.querySelector("#question");
 var option1 = document.querySelector("#option1");
 var option2 = document.querySelector("#option2");
@@ -85,7 +84,6 @@ function showQuestions(){
 }
 //console.log(currentQuestions);
 answerButtons.addEventListener("click", function(event){
-//    console.log(questions[index].a);    
     if(event.target.value === questions[index].a) {
         alert("CORRECT!")
         score++;
