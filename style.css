@@ -86,13 +86,17 @@ html, body {
 
 #wrapper {
     height: 100%;
-    width: 100%;    
-    padding: 0;    
+    width: 100%;         
 }
+
 h1 {
     text-align: center;
     color: #ffc107;
     padding: 20px;
+    font-family: 'Goldman', cursive;
+    font-size: 64px;
+    text-decoration: underline;
+    text-shadow: 2px 2px 8px navy;
 }
 #mainRow {
     padding-top: 200px;
@@ -101,5 +105,13 @@ h1 {
     opacity: 0.9;
     font-weight: bold;
     color: darkviolet;
+    border-color: #343a40;
+}
+#startButton:hover {    
+    transform: scale(1.1);
+    transition: 0.4s ease;
+    color: #ffc107;
+    border-color: #ffc107;
+    box-shadow: 0 0 1rem #ffc107;
 }
 
