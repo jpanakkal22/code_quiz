@@ -82,30 +82,40 @@ html, body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    text-align: center;
 }
 
 #wrapper {
     height: 100%;
-    width: 100%;         
+    width: 100%; 
+    color: #ffc107;        
 }
 
 h1 {
-    text-align: center;
-    color: #ffc107;
+    text-align: center;    
     padding: 20px;
     font-family: 'Goldman', cursive;
     font-size: 64px;
     text-decoration: underline;
     text-shadow: 2px 2px 8px navy;
 }
-#mainRow {
-    padding-top: 200px;
+
+form {
+    font-weight: bold;
+    font-size: 22px;
+    text-shadow: 0 0 8px black;        
 }
+
+input, select {
+    opacity: 0.9;
+}
+
 #startButton {
     opacity: 0.9;
     font-weight: bold;
-    color: darkviolet;
+    color: black;
     border-color: #343a40;
+    margin-top: 50px;
 }
 #startButton:hover {    
     transform: scale(1.1);
