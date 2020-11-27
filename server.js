@@ -16,6 +16,7 @@ app.use(express.json());
 
 // Router
 require("./routes/html-routes")(app);
+require("./routes/api-routes")(app);
 
 // Start server and listen on port
 app.listen(port, () => {
