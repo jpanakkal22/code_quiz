@@ -1,20 +1,25 @@
-//Ajax GET request to Open Trivia Database
-$.ajax({
-    url:"https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple",
-    method: "GET"
-}).then(response => {
-    let array = response.results;
-    let newArray = array.map(trivia => {
-        let answers = [trivia.incorrect_answers[0], trivia.incorrect_answers[1], trivia.incorrect_answers[2], trivia.correct_answer];
-        return {
-            category: trivia.category,
-            questions: trivia.question,
-            choices: shuffle(answers),
-            answer: trivia.correct_answer
-        } 
-    }); 
-    console.log(newArray);
-});
+const startBtn = document.getElementById("startButton");
+const form = document.getElementById("form");
+
+function getQuestions() {
+    //Ajax GET request to Open Trivia Database
+    $.ajax({
+        url:"https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple",
+        method: "GET"
+    }).then(response => {
+        let array = response.results;
+        let newArray = array.map(trivia => {
+            let answers = [trivia.incorrect_answers[0], trivia.incorrect_answers[1], trivia.incorrect_answers[2], trivia.correct_answer];
+            return {
+                category: trivia.category,
+                questions: trivia.question,
+                choices: shuffle(answers),
+                answer: trivia.correct_answer
+            } 
+        }); 
+        console.log(newArray);
+    });
+}
 
 // Fisher-Yates Shuffle Algorithm
 function shuffle(array) {
