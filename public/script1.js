@@ -1,8 +1,16 @@
 const startBtn = document.getElementById("startButton");
 const form = document.getElementById("form");
+const question = document.getElementById("question");
+const choices = document.getElementById("choices");
+const choice1 = document.getElementById("choice1");
+const choice2 = document.getElementById("choice2");
+const choice3 = document.getElementById("choice3");
+const choice4 = document.getElementById("choice4");
+
 let amount;
 let category;
 let difficulty;
+let i = 0;
 
 query();
 
@@ -32,12 +40,13 @@ function getQuestions() {
             let answers = [trivia.incorrect_answers[0], trivia.incorrect_answers[1], trivia.incorrect_answers[2], trivia.correct_answer];
             return {
                 category: trivia.category,
-                questions: trivia.question,
+                question: trivia.question,
                 choices: shuffle(answers),
                 answer: trivia.correct_answer
             } 
         }); 
         console.log(newArray);
+        render(newArray);
     });
 }
 
@@ -59,6 +68,16 @@ function shuffle(array) {
     }
   
     return array;
+}
+
+// Render question and choices to html
+function render(array) {
+    question.textContent = array[i].question;
+    choice1.textContent = array[i].choices[0];
+    choice2.textContent = array[i].choices[1];
+    choice3.textContent = array[i].choices[2];
+    choice4.textContent = array[i].choices[3];
+
 }
   
   
