@@ -1,10 +1,30 @@
 const startBtn = document.getElementById("startButton");
 const form = document.getElementById("form");
+let amount;
+let category;
+let difficulty;
+
+query();
+
+function query() {
+    const queryString = window.location.search;
+
+    // URL SearchParams Constructor
+    const urlParams = new URLSearchParams(queryString);
+
+    // Update global variables with url params
+    amount = urlParams.get('amount');
+    category = urlParams.get('category');
+    difficulty = urlParams.get('difficulty');
+    
+    // Make Ajax call to API
+    getQuestions();
+}
 
 function getQuestions() {
     //Ajax GET request to Open Trivia Database
     $.ajax({
-        url:"https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple",
+        url:"https://opentdb.com/api.php?amount=" + amount + "&category=" + category + "&difficulty=" + difficulty + "&type=multiple",
         method: "GET"
     }).then(response => {
         let array = response.results;
