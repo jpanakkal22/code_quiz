@@ -1,81 +1,9 @@
-/* body {
-    background-color: yellow;
-}
-
-.main {
-    background-color: white;
-    padding: 50px;
-    margin-top: 30px;
-    
-}
-
-h1 {
-    text-decoration: underline orange;
-  
- 
-}
-
-#red {
-    color: red;
-}
-#blue {
-    color: blue;
-}
-#green {
-    color: green;
-}
-
-#button {
-    width: 400px;
-    
-    padding: 10px 0 10px 0;
-    border-radius: 20px;
-    
-    background:limegreen;
-    color: yellow;
-    font-weight: bolder;
-}
-
-
-#option1 {
-    width:400px;
-    
-    padding: 10px 0 10px 15px;
-    vertical-align: middle;
-    background:red;
-    margin: 10px 0 10px 10px;
-    color: white;
-    border-radius: 20px;
-    font-size: 20px;
-    
-}
-#option2 {
-    width:400px;
-   
-    padding: 10px 0 10px 15px;
-    vertical-align: middle;
-    background:blue;
-    margin: 10px 0 10px 10px;
-    color: white;
-    border-radius: 20px;
-    font-size: 20px;
-    
-}
-#option3 {
-    width:400px;
-   
-    padding: 10px 0 10px 15px;
-    vertical-align: middle;
-    background:purple;
-    margin: 10px 0 10px 10px;
-    color: white;
-    border-radius: 20px;
-    font-size: 20px;
-} */
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;    
 }
+
 html, body {
     height: 100%;
     background-image: url("./assets/coding_background.jpg");
@@ -83,6 +11,7 @@ html, body {
     background-repeat: no-repeat;
     background-position: center;
     text-align: center;
+    font-family: 'Goldman', cursive;
 }
 
 #wrapper {
@@ -93,8 +22,7 @@ html, body {
 
 h1 {
     text-align: center;    
-    padding: 20px;
-    font-family: 'Goldman', cursive;
+    padding: 20px;    
     font-size: 64px;
     text-decoration: underline;
     text-shadow: 2px 2px 8px navy;
@@ -117,6 +45,7 @@ input, select {
     border-color: #343a40;
     margin-top: 50px;
 }
+
 #startButton:hover {    
     transform: scale(1.1);
     transition: 0.4s ease;
@@ -124,4 +53,34 @@ input, select {
     border-color: #ffc107;
     box-shadow: 0 0 1rem #ffc107;
 }
+
+h3 {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    margin: 20px;
+}
+
+.answerBtn {
+    opacity: 0.9;
+    font-weight: bold;
+    color: black;
+    border-color: #343a40;
+}
+
+.answerBtn:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease;
+    color: #ffc107;
+    border-color: #ffc107;
+    box-shadow: 0 0 1rem #ffc107;
+}
+
+/* Media Queries */
+@media screen and (max-width: 420px) {
+    h3 {
+      padding: 20px;
+      margin: 0;
+      font-size: 1.5rem;
+    }
+  }
 
