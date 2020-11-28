@@ -54,7 +54,7 @@
         </div> 
         <div class="row d-flex justify-content-center pt-4">
             <div class="column-xs-12">
-                <form id="form" action="/api/quiz_type" method="POST">
+                <form id="form" action="./questions.html" method="GET">
                     <div class="form-group">
                       <label for="FormControlInput1">Number of Questions: (5-15)</label>
                       <input type="number" name="amount" min="5" max="15" class="form-control" id="FormControlInput1" required>
@@ -63,30 +63,27 @@
                       <label for="FormControlSelect1">Select Category:</label>
                       <select name="category" class="form-control" id="FormControlSelect1" required>
                         <option selected disabled value=""></option>
-                        <option>Computer Science</option>
-                        <option>Sports</option>
-                        <option>Geography</option>
-                        <option>History</option>
-                        <option>Celebrities</option>
+                        <option value="18">Computer Science</option>
+                        <option value="21">Sports</option>
+                        <option value="22">Geography</option>
+                        <option value="23">History</option>
+                        <option value="26">Celebrities</option>
                       </select>
                     </div> 
                     <div class="form-group">
                       <label for="FormControlSelect2">Select Difficulty:</label>
                       <select name="difficulty" class="form-control" id="FormControlSelect2" required>
                         <option selected disabled value=""></option>
-                        <option>Easy</option>
-                        <option>Medium</option>
-                        <option>Hard</option>                          
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>                          
                       </select>
                     </div>                    
                     <button type="submit" class="btn btn-warning btn-lg btn-outline-dark" id="startButton">START QUIZ!</button>                    
                 </form>
             </div>
         </div>        
-    </div>
-    
-  
-    <script src="script1.js"></script>
+    </div>   
     
 </body>
 
