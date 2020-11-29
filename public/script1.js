@@ -6,6 +6,7 @@ const choice1 = document.getElementById("choice1");
 const choice2 = document.getElementById("choice2");
 const choice3 = document.getElementById("choice3");
 const choice4 = document.getElementById("choice4");
+const gameOver = document.getElementById("gameOver");
 
 let amount;
 let category;
@@ -17,6 +18,7 @@ initialize();
 playQuiz();
 
 function initialize() {
+    gameOver.style.display = "none";
     const queryString = window.location.search;
 
     // URL SearchParams Constructor
@@ -102,7 +104,12 @@ function playQuiz() {
 // End Quiz
 function gameCheck() {
     if(i > amount - 1) {
-        alert("Game Over");
+        question.style.display = "none";
+        choice1.style.display = "none";
+        choice2.style.display = "none";
+        choice3.style.display = "none";
+        choice4.style.display = "none";
+        gameOver.style.display = "";
     }
     else {
         render(newArray);         
