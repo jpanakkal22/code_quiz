@@ -7,12 +7,14 @@ const choice2 = document.getElementById("choice2");
 const choice3 = document.getElementById("choice3");
 const choice4 = document.getElementById("choice4");
 const gameOver = document.getElementById("gameOver");
+const score = document.getElementById("score");
 
 let amount;
 let category;
 let difficulty;
 let newArray;
 let i = 0;
+let counter = 0;
 
 initialize();
 playQuiz();
@@ -76,6 +78,7 @@ function shuffle(array) {
 
 // Render question and choices to html
 function render(array) {
+    score.textContent = counter;
     question.textContent = array[i].question;
     choice1.textContent = array[i].choices[0];
     choice2.textContent = array[i].choices[1];
@@ -88,7 +91,8 @@ function playQuiz() {
     choices.addEventListener("click", function(event) {
         if(event.target.textContent === newArray[i].answer) {
             alert("Correct!");  
-            i++;          
+            i++; 
+            counter++;        
         } 
         else {
             alert ("Incorrect!");
@@ -96,9 +100,7 @@ function playQuiz() {
         } 
         // Check if there are still questions... if not, end game.
         gameCheck();
-    }); 
-
-      
+    });       
 }
 
 // End Quiz
