@@ -8,6 +8,7 @@ const choice3 = document.getElementById("choice3");
 const choice4 = document.getElementById("choice4");
 const gameOver = document.getElementById("gameOver");
 const score = document.getElementById("score");
+const timer = document.getElementById("timer");
 
 let amount;
 let category;
@@ -15,6 +16,7 @@ let difficulty;
 let newArray;
 let i = 0;
 let counter = 0;
+let time = 30;
 
 initialize();
 playQuiz();
@@ -88,6 +90,15 @@ function render(array) {
 
 // Play Quiz
 function playQuiz() {
+    let quizTimer = setInterval(function() {   
+        time--;
+        timer.textContent = time;        
+            if(time === 0 || i > amount - 1) {
+                clearInterval(quizTimer);
+                gameCheck();
+            }
+        }, 1000);
+    
     choices.addEventListener("click", function(event) {
         if(event.target.textContent === newArray[i].answer) {
             alert("Correct!");  
@@ -105,7 +116,7 @@ function playQuiz() {
 
 // End Quiz
 function gameCheck() {
-    if(i > amount - 1) {
+    if(i > amount - 1 || time === 0) {
         question.style.display = "none";
         choice1.style.display = "none";
         choice2.style.display = "none";
