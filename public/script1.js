@@ -10,11 +10,21 @@ const choice4 = document.getElementById("choice4");
 let amount;
 let category;
 let difficulty;
+let newArray;
 let i = 0;
 
-query();
+initialize();
 
-function query() {
+choices.addEventListener("click", function(event) {
+    console.log(event.target.textContent);
+    if(event.target.textContent === newArray[i].answer) {
+        alert("Correct!");
+    } else {
+        alert ("Incorrect!")
+    }
+})
+
+function initialize() {
     const queryString = window.location.search;
 
     // URL SearchParams Constructor
@@ -36,7 +46,7 @@ function getQuestions() {
         method: "GET"
     }).then(response => {
         let array = response.results;
-        let newArray = array.map(trivia => {
+        newArray = array.map(trivia => {
             let answers = [trivia.incorrect_answers[0], trivia.incorrect_answers[1], trivia.incorrect_answers[2], trivia.correct_answer];
             return {
                 category: trivia.category,
@@ -79,5 +89,10 @@ function render(array) {
     choice4.textContent = array[i].choices[3];
 
 }
+
+
+
+
+
   
   
