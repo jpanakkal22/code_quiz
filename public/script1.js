@@ -14,15 +14,7 @@ let newArray;
 let i = 0;
 
 initialize();
-
-choices.addEventListener("click", function(event) {
-    console.log(event.target.textContent);
-    if(event.target.textContent === newArray[i].answer) {
-        alert("Correct!");
-    } else {
-        alert ("Incorrect!")
-    }
-})
+playQuiz();
 
 function initialize() {
     const queryString = window.location.search;
@@ -87,7 +79,19 @@ function render(array) {
     choice2.textContent = array[i].choices[1];
     choice3.textContent = array[i].choices[2];
     choice4.textContent = array[i].choices[3];
+}
 
+// Play Quiz
+function playQuiz() {
+    choices.addEventListener("click", function(event) {
+        if(event.target.textContent === newArray[i].answer) {
+            alert("Correct!");            
+        } else {
+            alert ("Incorrect!");            
+        }
+        i++;
+        render(newArray);
+    });
 }
 
 
