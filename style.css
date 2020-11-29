@@ -66,6 +66,8 @@ h3 {
     font-weight: bold;
     color: black;
     border-color: #343a40;
+    font-size: 1rem;
+    margin: 10px;
 }
 
 .answerBtn:hover {
@@ -97,12 +99,12 @@ h3 {
     h3 {
       padding: 20px;
       margin: 0;
-      font-size: 1.5rem;
+      font-size: 20px;
     }
     #gameOver {
         font-size: 100px;
         animation-name: growText;
         animation-duration: .75s;
-    }
+    }    
   }
 
