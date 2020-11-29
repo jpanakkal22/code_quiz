@@ -9,6 +9,7 @@ html, body {
     background-image: url("./assets/coding_background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center;
     text-align: center;
     font-family: 'Goldman', cursive;
