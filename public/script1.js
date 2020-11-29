@@ -85,13 +85,28 @@ function render(array) {
 function playQuiz() {
     choices.addEventListener("click", function(event) {
         if(event.target.textContent === newArray[i].answer) {
-            alert("Correct!");            
-        } else {
-            alert ("Incorrect!");            
-        }
-        i++;
-        render(newArray);
-    });
+            alert("Correct!");  
+            i++;          
+        } 
+        else {
+            alert ("Incorrect!");
+            i++;            
+        } 
+        // Check if there are still questions... if not, end game.
+        gameCheck();
+    }); 
+
+      
+}
+
+// End Quiz
+function gameCheck() {
+    if(i > amount - 1) {
+        alert("Game Over");
+    }
+    else {
+        render(newArray);         
+    }  
 }
 
 
