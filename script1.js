@@ -16,7 +16,7 @@ let difficulty;
 let newArray;
 let i = 0;
 let counter = 0;
-let time = 30;
+let time;
 
 initialize();
 playQuiz();
@@ -29,10 +29,20 @@ function initialize() {
     const urlParams = new URLSearchParams(queryString);
 
     // Update global variables with url params
-    amount = urlParams.get('amount');
-    category = urlParams.get('category');
+    amount = parseInt(urlParams.get('amount'));
+    category = parseInt(urlParams.get('category'));
     difficulty = urlParams.get('difficulty');
     
+    // Set Timer
+    if(amount <= 8) {
+        time = 60;
+    }
+    else if (amount >= 9 && amount <= 11) {
+        time = 90;
+    }
+    else {
+        time = 180;
+    }
     // Make Ajax call to API
     getQuestions();
 }
