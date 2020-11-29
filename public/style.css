@@ -75,12 +75,33 @@ h3 {
     box-shadow: 0 0 1rem #ffc107;
 }
 
+#gameOver {
+    font-size: 150px;
+    color: aqua;
+    animation-name: growText;
+    animation-duration: .75s;
+}
+
+@keyframes growText {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
 /* Media Queries */
 @media screen and (max-width: 420px) {
     h3 {
       padding: 20px;
       margin: 0;
       font-size: 1.5rem;
+    }
+    #gameOver {
+        font-size: 100px;
+        animation-name: growText;
+        animation-duration: .75s;
     }
   }
 
