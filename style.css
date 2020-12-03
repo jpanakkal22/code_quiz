@@ -80,7 +80,21 @@ h3 {
     border-color: #ffc107;
     box-shadow: 0 0 1rem #ffc107;
 }
+#alert {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+}
+.alert1 {    
+    color: aqua;
+}
 
+.alert2 {    
+    color: deeppink;
+}
+
+#closeBtn {
+    padding-left: 10px;
+}
 #gameOver {
     font-size: 150px;
     color: aqua;

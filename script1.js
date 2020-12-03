@@ -8,6 +8,7 @@ const choice3 = document.getElementById("choice3");
 const choice4 = document.getElementById("choice4");
 const alertResult = document.getElementById("alert");
 const alertText = document.getElementById("alertText");
+const closeBtnX = document.getElementById("closeBtnX");
 const gameOver = document.getElementById("gameOver");
 const score = document.getElementById("score");
 const timer = document.getElementById("timer");
@@ -121,13 +122,18 @@ function playQuiz() {
     choices.addEventListener("click", function(event) {
         if(event.target.textContent === newArray[i].answer) {
             alertResult.style.display = ""; 
+            alertResult.setAttribute("class", "alert1");
+            closeBtnX.setAttribute("class", "alert1");
             alertText.textContent = "CORRECT!";
+            
             // i++; 
             counter++; 
         } 
         else {
             alertResult.style.display = "";
-            alertText.textContent = "Incorrect > " + `${newArray[i].answer.toUpperCase()}` ;
+            alertResult.setAttribute("class", "alert2");
+            closeBtnX.setAttribute("class", "alert2");
+            alertText.textContent = "Incorrect - " + `${newArray[i].answer.toUpperCase()}` ;
             // i++;                    
         }
        
