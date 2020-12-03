@@ -63,7 +63,7 @@ function getQuestions() {
                 answer: trivia.correct_answer
             } 
         }); 
-        console.log(newArray);
+        
         render(newArray);
     });
 }
@@ -90,12 +90,15 @@ function shuffle(array) {
 
 // Render question and choices to html
 function render(array) {
+
     score.textContent = counter;
-    question.textContent = array[i].question;
-    choice1.textContent = array[i].choices[0];
-    choice2.textContent = array[i].choices[1];
-    choice3.textContent = array[i].choices[2];
-    choice4.textContent = array[i].choices[3];
+
+    // Replace special characters before rendering
+    question.textContent = array[i].question.replace(/&#039;/g, "'").replace(/&quot;/ig, '"');
+    choice1.textContent = array[i].choices[0].replace(/&#039;/g, "'").replace(/&quot;/ig, '"');
+    choice2.textContent = array[i].choices[1].replace(/&#039;/g, "'").replace(/&quot;/ig, '"');
+    choice3.textContent = array[i].choices[2].replace(/&#039;/g, "'").replace(/&quot;/ig, '"');
+    choice4.textContent = array[i].choices[3].replace(/&#039;/g, "'").replace(/&quot;/ig, '"');
 }
 
 // Play Quiz
