@@ -6,6 +6,8 @@ const choice1 = document.getElementById("choice1");
 const choice2 = document.getElementById("choice2");
 const choice3 = document.getElementById("choice3");
 const choice4 = document.getElementById("choice4");
+const alertResult = document.getElementById("alert");
+const alertText = document.getElementById("alertText");
 const gameOver = document.getElementById("gameOver");
 const score = document.getElementById("score");
 const timer = document.getElementById("timer");
@@ -22,7 +24,11 @@ initialize();
 playQuiz();
 
 function initialize() {
+
+    // Make certain elements hidden initially
     gameOver.style.display = "none";
+    alertResult.style.display = "none";
+    
     const queryString = window.location.search;
 
     // URL SearchParams Constructor
@@ -63,7 +69,7 @@ function getQuestions() {
                 answer: trivia.correct_answer
             } 
         }); 
-        
+        console.log(newArray);
         render(newArray);
     });
 }
@@ -102,7 +108,7 @@ function render(array) {
 }
 
 // Play Quiz
-function playQuiz() {
+function playQuiz() {    
     let quizTimer = setInterval(function() {   
         time--;
         timer.textContent = time;        
@@ -111,21 +117,25 @@ function playQuiz() {
                 gameCheck();
             }
         }, 1000);
-    
+
     choices.addEventListener("click", function(event) {
         if(event.target.textContent === newArray[i].answer) {
-            alert("Correct!");  
-            i++; 
-            counter++;        
+            alertResult.style.display = ""; 
+            alertText.textContent = "CORRECT!";
+            // i++; 
+            counter++; 
         } 
         else {
-            alert ("Incorrect!");
-            i++;            
-        } 
+            alertResult.style.display = "";
+            alertText.textContent = "Incorrect > " + `${newArray[i].answer.toUpperCase()}` ;
+            // i++;                    
+        }
+       
         // Check if there are still questions... if not, end game.
-        gameCheck();
-    });       
+        gameCheck();   
+    });          
 }
+
 
 // End Quiz
 function gameCheck() {
