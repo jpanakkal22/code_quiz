@@ -123,21 +123,20 @@ function playQuiz() {
     choices.addEventListener("click", function(event) {
         if(event.target.textContent === newArray[i].answer) {
             alert1.style.display = "";
-            alert1.className = "alert1";            
+            alert1.className = "alert alert1";            
             alertText1.textContent = "CORRECT!"; 
             counter++;              
         }         
         else {
             alert1.style.display = "";
-            alert1.className = "alert2";
+            alert1.className = "alert alert2";
             alertText1.textContent = "Incorrect - " + `${newArray[i].answer.toUpperCase().replace(/&#039;/g, "'").replace(/&quot;/ig, '"')}`;
         }       
     }); 
     
     // Close alert and go to next question or end quiz
     closeBtn1.addEventListener("click", function() {
-        i++;                             
-        alert1.style.display = "none";  
+        i++;         
         gameCheck();                        
     });         
 }

@@ -82,13 +82,34 @@ h3 {
 }
 
 .alert1 { 
-    background: rgba(0, 0, 0, 0.5);   
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px 10px 20px;   
     color: aqua;
 }
 
 .alert2 {
-    background: rgba(0, 0, 0, 0.5);    
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 10px; 
     color: deeppink;
+}
+  
+/* The close button */
+.closebtn {
+margin-left: 15px;
+margin-top: 1px;
+color: inherit;
+font-weight: bold;
+float: right;
+font-size: 22px;
+line-height: 20px;
+cursor: pointer;
+transition: 0.3s;
+}
+  
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    transform: scale(1.75);
+    transition: 0.2s ease;
 }
 
 #gameOver {

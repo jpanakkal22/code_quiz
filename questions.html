@@ -49,14 +49,14 @@
                 <button type="button" class="btn btn-warning btn-lg btn-outline-dark answerBtn" id="choice4"></button>
             </div>           
         </div> 
-        <div class="row d-flex justify-content-center">            
-            <div class="column-xs-12">
-                <div id="alert1">
-                    <h4 id="alertText1"></h4>
-                    <button type="button" id="closeBtn1"><span>&times;</span></button>
+        <div class="row d-flex justify-content-center">
+            <div class="col-xs-12">
+                <div class="alert" id="alert1">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';" id="closeBtn1">&times;</span>
+                    <strong id="alertText1"></strong>
                 </div>
-            </div>
-        </div>            
+            </div>           
+        </div>                    
     </div> 
   
     <script src="script.js"></script>
