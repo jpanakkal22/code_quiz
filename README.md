@@ -1,7 +1,45 @@
 # code_quiz
 
->The purpose of this assignment was to create a quiz on Javascript fundamentals using Javascript. This quiz is to be timed and render a score after completion. 
+## Description
 
-![Code Quiz](assets/code_quiz.png)
 
-[Code Quiz](https://jpanakkal22.github.io/code_quiz/)
+![Code Quiz](assets/index.PNG)
+
+![Code Quiz](assets/quiz.PNG)
+
+![Code Quiz](assets/game_over.PNG)
+
+[CLICK TO PLAY!](https://jpanakkal22.github.io/code_quiz/)
+
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Badges](#badges)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+
+## Installation
+
+## Usage
+
+## License
+
+## Badges
+
+## Contributing 
+Feel free to contact me using the information in the Questions section.
+
+## Tests
+None
+
+## Questions?
+[jpanakkal22](https://github.com/jpanakkal22)
+
+You can also contact me at josh_panakkal3122@hotmail.com
+
+
+
+
