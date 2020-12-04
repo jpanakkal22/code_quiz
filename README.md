@@ -1,7 +1,7 @@
 # code_quiz
 
 ## Description
-
+    This application is a fun, multiple choice game that will test your knowledge in the categories of Computer Science, Sports, Geography, History and Automobiles! It pulls JSON from the Open Trivia API using queries of 'Number of Questions' and 'Difficulty'. The quiz was developed using only HTML, CSS/Bootstrap and JavaScript, and includes different features such as a third party API, a shuffle algorithm and timer to name a few. 
 
 ![Code Quiz](assets/index.PNG)
 
@@ -22,12 +22,16 @@
 * [Questions](#questions)
 
 ## Installation
+N/A
 
 ## Usage
+Test your knowledge in different categories using this Code Quiz. Race against the clock and try to answer all questions correctly!
 
 ## License
+N/A
 
 ## Badges
+N/A
 
 ## Contributing 
 Feel free to contact me using the information in the Questions section.
