@@ -4,6 +4,11 @@
     padding: 0;    
 }
 
+/* Declare mainOrange variable in root and assign color*/
+:root {
+    --mainOrange: #ffc107;
+}
+
 html, body {
     height: 100%;
     background-image: url("./assets/coding_background.jpg");
@@ -18,7 +23,7 @@ html, body {
 #wrapper {
     height: 100%;
     width: 100%; 
-    color: #ffc107;        
+    color: var(--mainOrange);        
 }
 
 h1 {
@@ -53,9 +58,9 @@ input, select {
 #startButton:hover {    
     transform: scale(1.1);
     transition: 0.4s ease;
-    color: #ffc107;
-    border-color: #ffc107;
-    box-shadow: 0 0 1rem #ffc107;
+    color: var(--mainOrange);
+    border-color: var(--mainOrange);
+    box-shadow: 0 0 1rem var(--mainOrange);
 }
 
 h3 {
@@ -76,9 +81,9 @@ h3 {
 .answerBtn:hover {
     transform: scale(1.1);
     transition: 0.2s ease;
-    color: #ffc107;
-    border-color: #ffc107;
-    box-shadow: 0 0 1rem #ffc107;
+    color: var(--mainOrange);
+    border-color: var(--mainOrange);
+    box-shadow: 0 0 1rem var(--mainOrange);
 }
 
 .alert1 { 
